@@ -1,0 +1,119 @@
+1. The sum of Two Numbers
+def add_two_num(a, b):
+    sum = a + b
+    return sum
+
+# Example usage
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Sum:", add_two_num(a, b))
+
+2.Odd or Even
+def even_or_odd(x):
+    if x % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+# Example usage
+x = int(input("Enter a number: "))
+print("The number is", even_or_odd(x))
+
+
+3.Factorial Calculation
+//(a).using loop
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+# Example usage
+n = int(input("Enter a number: "))
+print("Factorial:", factorial(n))
+
+//(b).using the built-in math.factorial
+import math
+
+n = int(input("Enter a number: "))
+print("Factorial:", math.factorial(n))
+
+
+4.Fibonacci Sequence
+def fibonacci(n):
+    sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
+
+# Example usage
+n = int(input("Enter the number of Fibonacci terms: "))
+print("Fibonacci sequence:", fibonacci(n))
+
+
+5.Reverse a String
+def reverse_string(s):
+    return s[::-1]
+
+# Example usage
+s = input("Enter a string: ")
+print("Reversed string:", reverse_string(s))
+
+
+6.Palindrome check
+def is_palindrome(s):
+    return s == s[::-1]
+
+# Example usage
+s = input("Enter a string: ")
+print("Is palindrome?", is_palindrome(s))
+
+7.Leap Year Check
+def is_leap_year(year):
+    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
+# Example usage
+year = int(input("Enter a year: "))
+print("Is leap year?", is_leap_year(year))
+
+8.Armstrong Number
+def is_armstrong(n):
+    digits = str(n)
+    power = len(digits)
+    total = sum(int(d)**power for d in digits)
+    return total == n
+
+# Example usage
+n = int(input("Enter a number: "))
+print("Is Armstrong number?", is_armstrong(n))
+
+
+Caesar Cipher: Custom Encryption-Decryption
+# Caesar Cipher Implementation
+
+def encrypt(text, shift):
+    result = ""
+    for char in text:
+        if char.isalpha():
+            # Shift letters
+            base = ord('A') if char.isupper() else ord('a')
+            result += chr((ord(char) - base + shift) % 26 + base)
+        else:
+            # Keep special characters as-is
+            result += char
+    return result
+
+def decrypt(cipher, shift):
+    return encrypt(cipher, -shift)
+
+# Example usage
+message = input("Enter your message: ")
+key = int(input("Enter shift key (e.g., 3): "))
+
+encrypted = encrypt(message, key)
+decrypted = decrypt(encrypted, key)
+
+print("Encrypted message:", encrypted)
+print("Decrypted message:", decrypted)
