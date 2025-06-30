@@ -7,139 +7,237 @@
 
 ---
 
-## 1. Sum of Two Numbers
+## ✅ List of Programs:
 
+### 1. Sum of Two Numbers
 **Approach:**  
-Created a function that accepts two integers and returns their sum.
+Took two integers as input and returned their sum using simple arithmetic.
 
-**Challenges:**  
-None – basic arithmetic.
+**Challenges Faced:**  
+None – basic arithmetic logic.
 
-**Solution:**  
-Used `a + b` and returned the result from a function.
+**Learning:**  
+Practiced taking inputs and using functions.
 
 ---
 
-## 2. Odd or Even
-
+### 2. Odd or Even
 **Approach:**  
-Checked whether the input number is divisible by 2.
+Checked if the input number is divisible by 2 using the modulus operator.
 
-**Challenges:**  
-Simple logic, no issues.
+**Challenges Faced:**  
+None.
 
-**Solution:**  
-Used modulus operator `%` to determine parity.
+**Learning:**  
+Learned use of conditional statements and modulus operator.
 
 ---
 
-## 3. Factorial Calculation
-
+### 3. Factorial Calculation
 **Approach:**  
-Used both a manual loop and Python's `math.factorial()` function.
+Calculated factorial using both a manual loop and Python’s `math.factorial()` function.
 
-**Challenges:**  
-Understanding and managing loop logic correctly.
+**Challenges Faced:**  
+Understanding loop-based logic.
 
-**Solution:**  
-Looped from 1 to `n` and multiplied incrementally; also used built-in function.
+**Learning:**  
+Gained confidence in loops and library functions.
 
 ---
 
-## 4. Fibonacci Sequence
-
+### 4. Fibonacci Sequence
 **Approach:**  
-Generated Fibonacci numbers iteratively using two variables `a` and `b`.
+Generated Fibonacci series using two variables in an iterative loop.
 
-**Challenges:**  
-Maintaining the current and next terms correctly during iteration.
+**Challenges Faced:**  
+Maintaining correct values of the current and next term.
 
-**Solution:**  
-Used a for-loop with `a, b = 0, 1` and `a, b = b, a + b`.
+**Learning:**  
+Learned how to work with loops and sequence generation.
 
 ---
 
-## 5. Reverse a String
-
+### 5. Reverse a String
 **Approach:**  
-Used Python slicing to reverse the string.
+Used Python string slicing to reverse the string.
 
-**Challenges:**  
-None – straightforward with Python’s features.
+**Challenges Faced:**  
+None.
 
-**Solution:**  
-Returned `s[::-1]`.
+**Learning:**  
+Practiced string manipulation.
 
 ---
 
-## 6. Palindrome Check
-
+### 6. Palindrome Check
 **Approach:**  
-Checked whether a string is equal to its reversed version.
+Compared the original string with its reversed version.
 
-**Challenges:**  
-No major challenge, but could consider ignoring cases and spaces in future improvements.
+**Challenges Faced:**  
+None.
 
-**Solution:**  
-Used `s == s[::-1]`.
+**Learning:**  
+Learned about string comparison.
 
 ---
 
-## 7. Leap Year Check
-
+### 7. Leap Year Check
 **Approach:**  
-Used standard rules for leap year checking.
+Used standard leap year checking rules.
 
-**Challenges:**  
-Understanding the edge case (divisible by 100 but not by 400).
+**Challenges Faced:**  
+Understanding century year conditions (divisible by 100 but not 400).
 
-**Solution:**  
-Used condition: `(year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)`.
+**Learning:**  
+Reinforced conditional logic.
 
 ---
 
-## 8. Armstrong Number
-
+### 8. Armstrong Number
 **Approach:**  
-Raised each digit of the number to the power equal to the number of digits and summed them.
+Calculated the sum of digits raised to the power of number of digits.
 
-**Challenges:**  
-Managing conversions between string and integer.
+**Challenges Faced:**  
+Managing digit extraction and exponentiation.
 
-**Solution:**  
-Used: `sum(int(d)**power for d in str(n)) == n`.
+**Learning:**  
+Improved skills in number manipulation.
 
 ---
 
-## Caesar Cipher – Custom Encryption & Decryption
-
+### 9. Prime Number Check
 **Approach:**  
-The Caesar Cipher is one of the simplest and oldest encryption techniques. It works by shifting each letter in the message by a fixed number of positions in the alphabet. For example, if the shift is 3, then A becomes D, B becomes E, and so on. I implemented this manually without using any encryption libraries, which helped me understand how encryption works at a basic level.
+Checked divisibility of number from 2 to √n.
 
-The program accepts a plain text message and a key (the number of positions to shift), then outputs the encrypted text. It also supports decryption by applying the opposite shift.
+**Challenges Faced:**  
+Understanding loop range and efficiency.
 
-**Challenges:**  
-- I had to make sure the encryption worked for both **uppercase and lowercase** letters.
-- I needed to **ignore special characters and spaces** without affecting the format.
-- Handling the **wrap-around logic** when shifting letters beyond 'Z' or 'z' required some careful math.
-
-**Solution:**  
-- Used `ord()` to get the ASCII value of the letter.
-- Subtracted the base ASCII value (`'A'` or `'a'`) to shift letters within a 0–25 range.
-- Used `(position + shift) % 26` to handle wrap-around.
-- Converted the result back to a character using `chr()`.
-- For decryption, the same function is reused by passing a **negative shift**.
-
-**What I Learned:**  
-This helped me understand how simple encryption algorithms work and gave me practical experience with string manipulation, loops, and conditionals. It also deepened my appreciation for the complexity behind even basic security methods.
+**Learning:**  
+Gained knowledge about prime number checking logic.
 
 ---
 
-## 📘 Conclusion
+### 10. Sum of Digits
+**Approach:**  
+Converted number to string, iterated through digits, and summed them.
 
-This mini project helped me reinforce important core Python programming skills like loops, conditionals, functions, and string operations. The Caesar Cipher task, especially, gave me hands-on exposure to encryption logic and how data can be secured using basic principles.
+**Challenges Faced:**  
+Handling negative numbers by using absolute value.
 
-Creating the documentation helped me organize and reflect on my thought process, which improved both my problem-solving clarity and my ability to communicate technical solutions effectively — a vital skill for any future developer.
+**Learning:**  
+Learned digit-wise operations.
+
+---
+
+### 11. LCM and GCD
+**Approach:**  
+Used Python’s `math.gcd()` for GCD and formula for LCM.
+
+**Challenges Faced:**  
+Understanding GCD-LCM relationship.
+
+**Learning:**  
+Learned use of built-in math library and number theory basics.
+
+---
+
+### 12. List Reversal (Without Built-in reverse())
+**Approach:**  
+Reversed a list manually using two-pointer method.
+
+**Challenges Faced:**  
+Handling index swapping correctly.
+
+**Learning:**  
+Strengthened knowledge of list indexing.
+
+---
+
+### 13. Sort a List
+**Approach:**  
+Used Python’s built-in `sorted()` function to sort the list.
+
+**Challenges Faced:**  
+None.
+
+**Learning:**  
+Practiced use of built-in functions.
+
+---
+
+### 14. Remove Duplicates from List
+**Approach:**  
+Converted list to set and back to list to remove duplicates.
+
+**Challenges Faced:**  
+Preserving original order (could improve using collections in future).
+
+**Learning:**  
+Learned about Python sets and their properties.
+
+---
+
+### 15. String Length (Without len())
+**Approach:**  
+Manually counted characters in a string using a loop.
+
+**Challenges Faced:**  
+None.
+
+**Learning:**  
+Strengthened looping concepts.
+
+---
+
+### 16. Count Vowels and Consonants
+**Approach:**  
+Iterated through each character and checked if it’s a vowel or consonant.
+
+**Challenges Faced:**  
+Differentiating between vowels, consonants, and non-alphabet characters.
+
+**Learning:**  
+Improved string iteration and conditional checks.
+
+---
+
+### 17. Caesar Cipher (Encryption & Decryption)
+**Approach:**  
+Shifted each letter by a key value (both for encryption and decryption).
+
+**Challenges Faced:**  
+- Handling wrap-around cases for 'z' and 'Z'.  
+- Maintaining case sensitivity.  
+- Ignoring special characters.
+
+**Learning:**  
+Learned basics of text encryption and decryption.
+
+---
+
+### 18. Maze Generator and Solver
+**Approach:**  
+Created a simple 2D maze using lists and solved it using depth-first search (DFS) or similar traversal.
+
+**Challenges Faced:**  
+- Representing the maze grid.  
+- Finding a path from start to end.  
+- Handling boundary conditions.
+
+**Learning:**  
+Understood recursion and backtracking. Gained knowledge of problem-solving in grid-based environments.
+
+---
+
+## ✅ Conclusion:
+
+This mini project helped me:
+
+- Strengthen my core Python programming skills.  
+- Learn how to write clean functions.  
+- Practice loops, conditionals, string manipulation, list operations, and basic algorithms.  
+- Implement simple encryption techniques like Caesar Cipher.  
+- Work on logic building and problem-solving.  
 
 ---
 
