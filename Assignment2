@@ -1,0 +1,108 @@
+9..Prime Number
+import math
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Example usage:
+n = int(input("Enter a number: "))
+print(is_prime(n))
+
+10.Sum of Digit
+def sum_of_digits(n):
+    return sum(int(digit) for digit in str(abs(n)))
+
+# Example usage:
+n = int(input("Enter a number: "))
+print(sum_of_digits(n))
+
+11. LCM and GCD
+import math
+
+def lcm_and_gcd(a, b):
+    gcd = math.gcd(a, b)
+    lcm = abs(a * b) // gcd
+    return lcm, gcd
+
+# Example usage:
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+lcm, gcd = lcm_and_gcd(a, b)
+print("LCM:", lcm)
+print("GCD:", gcd)
+
+12. List Reversal
+def reverse_list(lst):
+    start = 0
+    end = len(lst) - 1
+    while start < end:
+        # Swap elements
+        lst[start], lst[end] = lst[end], lst[start]
+        start += 1
+        end -= 1
+    return lst
+
+# Example usage:
+lst = [int(x) for x in input("Enter list elements separated by space: ").split()]
+print("Reversed list:", reverse_list(lst))
+
+13. Sort a List( built-in sorted() function)
+
+def sort_list(lst):
+    return sorted(lst)
+
+# Example usage:
+lst = [int(x) for x in input("Enter list elements separated by space: ").split()]
+print("Sorted list:", sort_list(lst))
+
+
+14. Remove Duplicates
+def remove_duplicates(lst):
+    return list(set(lst))
+
+# Example usage:
+lst = [int(x) for x in input("Enter list elements separated by space: ").split()]
+print("List after removing duplicates:", remove_duplicates(lst))
+
+
+15. String Length
+def string_length(s):
+    count = 0
+    for char in s:
+        count += 1
+    return count
+
+# Example usage:
+s = input("Enter a string: ")
+print("Length of the string:", string_length(s))
+
+
+16. Count Vowels and Consonants
+def count_vowels_and_consonants(s):
+    vowels = set('aeiouAEIOU')
+    vowel_count = 0
+    consonant_count = 0
+
+    for char in s:
+        if char.isalpha():
+            if char in vowels:
+                vowel_count += 1
+            else:
+                consonant_count += 1
+    return vowel_count, consonant_count
+
+# Example usage:
+s = input("Enter a string: ")
+vowels, consonants = count_vowels_and_consonants(s)
+print("Vowels:", vowels)
+print("Consonants:", consonants)
+
+
+
+
+

@@ -4,7 +4,7 @@ def add_two_num(a, b):
     return sum
 
 # Example usage
-a = int(input("Enter first number: "))
+a = int(ingitput("Enter first number: "))
 b = int(input("Enter second number: "))
 print("Sum:", add_two_num(a, b))
 
