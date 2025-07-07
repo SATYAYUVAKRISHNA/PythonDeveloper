@@ -6,4 +6,4 @@ def string_length(s):
 
 # Example usage:
 s = input("Enter a string: ")
-print("Length of the string:", string_length(s))git status
+print("Length of the string:", string_length(s))

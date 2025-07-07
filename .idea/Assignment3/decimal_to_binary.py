@@ -1,11 +1,7 @@
-def check_anagram():
-    str1 = input("Enter first string: ").replace(" ", "").lower()
-    str2 = input("Enter second string: ").replace(" ", "").lower()
-
-    if sorted(str1) == sorted(str2):
-        print("Yes, the strings are anagrams.")
-    else:
-        print("No, the strings are not anagrams.")
+def decimal_to_binary():
+    n = int(input("Enter a decimal number: "))
+    binary = bin(n)[2:]  # Remove the '0b' prefix
+    print(f"Binary of {n} is: {binary}")
 
 # Call the function
-check_anagram()
+decimal_to_binary()
